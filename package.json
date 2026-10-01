@@ -8,9 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "practice:new": "node scripts/practice.mjs new",
-    "practice:save": "node scripts/practice.mjs save",
-    "practice:open": "node scripts/practice.mjs open"
+    "practice:new": "node \"C:/Users/safar/.gemini/scripts/practice-engine.mjs\" new",
+    "practice:save": "node \"C:/Users/safar/.gemini/scripts/practice-engine.mjs\" save",
+    "practice:open": "node \"C:/Users/safar/.gemini/scripts/practice-engine.mjs\" open"
   },
   "dependencies": {
     "react": "^19.2.8",
