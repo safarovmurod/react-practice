@@ -13,9 +13,11 @@
     "practice:open": "node \"C:/Users/safar/.gemini/scripts/practice-engine.mjs\" open"
   },
   "dependencies": {
+    "jotai": "^3.0.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router": "^8.4.0",
+    "react-router-dom": "^7.18.4",
     "zustand": "^5.0.15"
   },
   "devDependencies": {
