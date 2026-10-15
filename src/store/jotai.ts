@@ -9,6 +9,7 @@ type User = {
   img: string;
   job: string;
   desc: string;
+  status: boolean;
 };
 
 export const getData = atomWithRefresh(async (get) => {
@@ -28,6 +29,14 @@ export const DeleteAtom = atom(null, async (get, set, id: string) => {
         console.error(error);
     }
 });
-
+export const addAtom = atom()
+export const updateAtom = atom(null, async(get,set,user:User)=>{
+    try {
+        await axios.put(`${get(api)}/${user.id}`, user);
+        set(getData);
+    } catch (error) {
+        console.error(error);
+    }
+})
 
 export const unwapAtom =unwrap(getData,(prev)=>prev||[])
