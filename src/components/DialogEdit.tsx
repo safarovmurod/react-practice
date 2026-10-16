@@ -23,7 +23,7 @@ export default function DialogEdit({ user, onClose }: DialogEditProps) {
     onSubmit: async (values) => {
       setFormError("")
       if (!values.name.trim()) {
-        setFormError("Номро дуруст ворид кун.")
+        setFormError("Номро дуруст ворид кунед.")
         return
       }
       try {
@@ -48,24 +48,39 @@ export default function DialogEdit({ user, onClose }: DialogEditProps) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white p-6 rounded-xl w-96 max-w-full shadow-lg text-black">
-        <h2 className="text-xl font-bold mb-4">Таҳрири корбар</h2>
-        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
+    <div className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-2xl w-full max-w-md p-6 shadow-2xl border border-slate-100 text-slate-800">
+        <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+          <h2 className="text-lg font-bold text-slate-900">Таҳрири корбар</h2>
+          <button
+            type="button"
+            onClick={handleClose}
+            className="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-100 transition cursor-pointer"
+          >
+            ✕
+          </button>
+        </div>
+
+        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4 mt-4">
           <div>
-            <label htmlFor="edit-name" className="block text-sm font-medium mb-1">Ном</label>
+            <label htmlFor="edit-name" className="block text-sm font-medium text-slate-700 mb-1.5">
+              Ному насаб
+            </label>
             <input
               id="edit-name"
               type="text"
               name="name"
               value={formik.values.name}
               onChange={formik.handleChange}
-              className="border border-gray-300 w-full p-2 rounded-lg outline-none focus:border-blue-500"
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition text-slate-800"
               required
             />
           </div>
+
           <div>
-            <label htmlFor="edit-age" className="block text-sm font-medium mb-1">Синну сол</label>
+            <label htmlFor="edit-age" className="block text-sm font-medium text-slate-700 mb-1.5">
+              Синну сол
+            </label>
             <input
               id="edit-age"
               type="number"
@@ -73,30 +88,41 @@ export default function DialogEdit({ user, onClose }: DialogEditProps) {
               min="0"
               value={formik.values.age}
               onChange={formik.handleChange}
-              className="border border-gray-300 w-full p-2 rounded-lg outline-none focus:border-blue-500"
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition text-slate-800"
             />
           </div>
-          <label className="flex items-center gap-2 cursor-pointer">
+
+          <label className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60 cursor-pointer select-none">
             <input
               type="checkbox"
               name="status"
               checked={formik.values.status}
               onChange={formik.handleChange}
-              className="w-4 h-4 cursor-pointer"
+              className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 border-slate-300 cursor-pointer"
             />
-            <span className="text-sm font-medium">Статус (Online)</span>
+            <span className="text-sm font-medium text-slate-700">Ҳолат дар шабака (Online)</span>
           </label>
-          {formError && <p role="alert" className="text-sm text-red-600">{formError}</p>}
-          <div className="flex justify-end gap-2 mt-2">
-            <button type="button" onClick={handleClose} className="px-4 py-2 border rounded-lg hover:bg-gray-100 transition cursor-pointer">
+
+          {formError && (
+            <p role="alert" className="text-sm text-rose-600 bg-rose-50 p-2.5 rounded-xl border border-rose-100">
+              {formError}
+            </p>
+          )}
+
+          <div className="flex justify-end gap-2.5 pt-3 border-t border-slate-100 mt-2">
+            <button
+              type="button"
+              onClick={handleClose}
+              className="px-4 py-2.5 border border-slate-200 rounded-xl text-slate-600 hover:bg-slate-50 text-sm font-medium transition cursor-pointer"
+            >
               Бекор кардан
             </button>
             <button
               type="submit"
               disabled={formik.isSubmitting}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition cursor-pointer disabled:opacity-50"
+              className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-medium transition cursor-pointer disabled:opacity-50 shadow-sm"
             >
-              {formik.isSubmitting ? "Сабт..." : "Сабт кардан"}
+              {formik.isSubmitting ? "Сабт..." : "Сабти тағйирот"}
             </button>
           </div>
         </form>
