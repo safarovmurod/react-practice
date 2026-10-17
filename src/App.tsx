@@ -2,12 +2,13 @@ import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import DialogAdd from "./components/DialogAdd"
 import { getData } from "./store/counterSlice"
+import DialogEdit from "./components/DialogEdit"
 
 export default function App() {
   const dispatch = useDispatch()
   const { data, loading } = useSelector((state) => state.data)
   const [open, setOpen] = useState(false)
-
+  const [user,setUser] = useState(null)
   useEffect(() => {
     dispatch(getData())
   }, [dispatch])
@@ -18,7 +19,8 @@ export default function App() {
         {open ? "Close" : "Add"}
       </button>
 
-      <DialogAdd open={open} />
+      <DialogAdd setOpen={setOpen} open={open} />
+      <DialogEdit setUser={setUser} user={user} />
 
       <div>
         {loading ? (
@@ -44,7 +46,7 @@ export default function App() {
                   <button onClick={() => dispatch(DeleteData(el.id))}>
                     Delete
                   </button>
-                  <button>Edit</button>
+                  <button onClick={()=>setUser(el)}>Edit</button>
                 </div>
               </div>
             )

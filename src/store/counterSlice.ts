@@ -23,6 +23,16 @@ export const DeleteData = createAsyncThunk('data/DeleteData',async(id,{dispatch}
   }
 })
 
+export  const EditData = createAsyncThunk('data/EditData',async(user,{dispatch})=>{
+            try {
+              await axios.put(`${api}/${user.id}`,user)
+              dispatch(getData())
+            } catch (error) {
+              console.error(error);
+              
+            }
+})
+
 export  const AddData = createAsyncThunk('data/AddData',async(user,{dispatch})=>{
   try {
      await axios.post(api,user)
