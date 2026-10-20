@@ -1,0 +1,1 @@
+export const apiJotai = 'https://6a0f696cd2a9857070354e31.mockapi.io/v1/api3'
