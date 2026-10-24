@@ -1,4 +1,4 @@
-import axios from "axios";
+import { getErrorMessage } from "../../token/getErrorMessage";
 import type { FormEvent } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -17,19 +17,7 @@ export default function LoginForm({ onSwitch }: FormProps) {
       saveToken(data.accessToken, data.refreshToken);
       navigate("/dashboard");
     } catch (error) {
-      if (axios.isAxiosError(error) && error.response) {
-        const responseError = error.response.data?.error;
-
-        if (typeof responseError === "string") {
-          setError(responseError);
-        } else if (typeof responseError?.message === "string") {
-          setError(responseError.message);
-        } else {
-          setError("Даромадан нашуд. Email ё паролро санҷ.");
-        }
-      } else {
-        setError("Ба backend пайваст нашуд. Интернет ё серверро санҷ.");
-      }
+      setError(getErrorMessage(error, "Даромадан нашуд. Email, парол ё пайвасти серверро санҷ."));
     }
   }
   function handleSubmit(event: FormEvent<HTMLFormElement>) {

@@ -1,4 +1,4 @@
-import axios from "axios";
+import { getErrorMessage } from "../../token/getErrorMessage";
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { useNavigate } from "react-router";
@@ -21,19 +21,7 @@ export default function RegisterForm({ onSwitch }: FormProps) {
       saveToken(data.accessToken, data.refreshToken);
       navigate("/dashboard");
     } catch (error) {
-      if (axios.isAxiosError(error) && error.response) {
-        const responseError = error.response.data?.error;
-
-        if (typeof responseError === "string") {
-          setError(responseError);
-        } else if (typeof responseError?.message === "string") {
-          setError(responseError.message);
-        } else {
-          setError("Бақайдгирӣ нашуд.");
-        }
-      } else {
-        setError("Ба backend пайваст нашд. Интернет ё серверро санҷ.");
-      }
+      setError(getErrorMessage(error, "Бақайдгирӣ нашуд. Маълумот ё пайвасти серверро санҷ."));
     }
   }
   function handleRegister(event: FormEvent<HTMLFormElement>) {

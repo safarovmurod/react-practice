@@ -105,3 +105,10 @@ npm run build
 Коди практикаатро аз ҳамин файл ё компонентҳо сар кун.
 
 Промт ва план: [SETUP.md](./SETUP.md).
+# Backend дар cloud / Vercel
+
+Дар environment-и Vercel `VITE_API_URL`-ро ба суроғаи воқеии backend (бе `/api` дар охир) гузор ва Redeploy кун.
+Барои локалӣ `.env.example`-ро ба `.env.local` нусха карда, суроғаро иваз кун.
+Ин репозиторий frontend аст; endpoint-ҳои `/api/auth/login` ва `/api/auth/register` бояд дар backend бошанд.
+Backend бояд origin-и frontend-ро дар CORS иҷозат диҳад. URL-и мисол backend-и воқеӣ нест.
+
