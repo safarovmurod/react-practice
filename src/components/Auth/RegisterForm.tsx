@@ -22,7 +22,15 @@ export default function RegisterForm({ onSwitch }: FormProps) {
       navigate("/dashboard");
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
-        setError(error.response.data.error || "Бақайдгирӣ нашуд.");
+        const responseError = error.response.data?.error;
+
+        if (typeof responseError === "string") {
+          setError(responseError);
+        } else if (typeof responseError?.message === "string") {
+          setError(responseError.message);
+        } else {
+          setError("Бақайдгирӣ нашуд.");
+        }
       } else {
         setError("Ба backend пайваст нашд. Интернет ё серверро санҷ.");
       }

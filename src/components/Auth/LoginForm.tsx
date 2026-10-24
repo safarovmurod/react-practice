@@ -18,11 +18,17 @@ export default function LoginForm({ onSwitch }: FormProps) {
       navigate("/dashboard");
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
-        setError(
-          error.response.data.error || "ошыбка шд гап чап тугри нагирифт",
-        );
+        const responseError = error.response.data?.error;
+
+        if (typeof responseError === "string") {
+          setError(responseError);
+        } else if (typeof responseError?.message === "string") {
+          setError(responseError.message);
+        } else {
+          setError("Даромадан нашуд. Email ё паролро санҷ.");
+        }
       } else {
-        setError("Ба backend пайваст нашд. Интернета ё  серверра санҷ");
+        setError("Ба backend пайваст нашуд. Интернет ё серверро санҷ.");
       }
     }
   }
