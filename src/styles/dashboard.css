@@ -1,0 +1,269 @@
+.welcome {
+  font-size: 20px !important;
+  margin: 0 0 36px;
+}
+
+.balances {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.balance-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  min-height: 120px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid #edf1ff;
+  border-radius: 25px;
+  box-shadow: 0 1px 2px #d9e2fb33;
+}
+
+.balance-card.total {
+  border-color: #27aa82;
+  background: var(--page-background);
+}
+
+.balance-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 17px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.balance-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.balance-icon.orange {
+  background: #f4e8d3;
+}
+
+.balance-icon.green {
+  background: #dff2ec;
+}
+
+.balance-icon.red {
+  background: #fbdfe3;
+}
+
+.balance-text {
+  text-align: right;
+  min-width: 0;
+}
+
+.balance-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.balance-amount {
+  margin-top: 14px;
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+.balance-amount strong {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.balance-amount span {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: minmax(0, 2.07fr) minmax(280px, 1fr);
+  gap: 22px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.chart-box,
+.payments-box {
+  overflow: hidden;
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px;
+}
+
+.year-button {
+  width: 100px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #bdc9d7;
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 12px;
+}
+
+.chart-content {
+  padding: 0 24px 24px;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #123559;
+}
+
+.chart-legend span {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.chart-legend i {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.green-dot {
+  background: #27aa82;
+}
+
+.red-dot {
+  background: #f02032;
+}
+
+.chart {
+  width: 100%;
+  height: 320px;
+  display: block;
+}
+
+.chart-grid {
+  stroke: #e4e9f0;
+  stroke-dasharray: 3 4;
+}
+
+.chart-labels {
+  fill: #667788;
+  font-size: 13px;
+}
+
+.chart-green {
+  fill: none;
+  stroke: #27aa82;
+  stroke-width: 3;
+  opacity: 0.1;
+}
+
+.chart-red {
+  fill: none;
+  stroke: #f02032;
+  stroke-width: 3;
+  opacity: 0.1;
+}
+
+.payments-heading {
+  padding: 22px 20px;
+  border-bottom: 1px solid var(--surface-border);
+  font-size: 14px !important;
+}
+
+.payments-content {
+  padding: 20px 24px;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.payment:last-child {
+  border-bottom: 0;
+}
+
+.payment-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.payment-icon.green {
+  background: #e8f5f0;
+}
+
+.payment-icon.red {
+  background: #fcedef;
+}
+
+.payment-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.payment-name {
+  min-width: 0;
+  flex: 1;
+}
+
+.payment-name p {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Recharts: як график барои компютер ва телефон. */
+.monthly-debt-chart {
+  width: 100%;
+  height: 320px;
+  min-width: 0;
+}
+.interactive-chart-legend button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  font: inherit;
+}
+.interactive-chart-legend button[aria-pressed="false"] {
+  opacity: 0.35;
+}
+@media (max-width: 600px) {
+  .monthly-debt-chart {
+    height: 240px;
+  }
+}
+
+button.balance-card {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+button.balance-card:focus-visible {
+  outline: 2px solid #487cff;
+  outline-offset: 3px;
+}

@@ -1,0 +1,250 @@
+/* Танҳо формаи қарз: андоза ва ҷойгиршавӣ мисли намуна. */
+.MuiDialog-paper.form-dialog.debt-form {
+  width: 768px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 48px);
+  margin: 24px 16px;
+  padding: 24px;
+  border-radius: 8px;
+  gap: 38px;
+  flex-shrink: 0;
+}
+.debt-form .dialog-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.debt-form .dialog-heading svg {
+  width: 22px;
+  height: 22px;
+}
+.debt-form .dialog-heading h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.debt-form form {
+  gap: 28px;
+}
+.debt-form .form-fields {
+  gap: 20px;
+}
+.debt-form .outlined-field {
+  gap: 8px;
+}
+.debt-form .outlined-field .form-label {
+  position: static;
+  padding: 0;
+  pointer-events: auto;
+  background: transparent;
+  font-size: 14px;
+}
+.debt-form .outlined-field:has(input) .form-label {
+  top: auto;
+  font-size: 14px;
+}
+.debt-form input {
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+.debt-form input::placeholder,
+.debt-form textarea::placeholder {
+  color: #a0a7af;
+}
+.debt-amount-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.debt-form .debt-type {
+  gap: 0;
+}
+.debt-form .debt-type button {
+  height: 40px;
+  padding: 0 8px;
+  font-size: 13px;
+  border-radius: 0;
+}
+.debt-form .debt-type button:first-child {
+  border-radius: 7px 0 0 7px;
+  border-color: #ff3545;
+  color: #f02032;
+}
+.debt-form .debt-type button:last-child {
+  border-radius: 0 7px 7px 0;
+  border-color: #27aa82;
+  color: #27aa82;
+}
+.debt-form .debt-type .selected-payable {
+  background: #f7c4c4;
+}
+.debt-form .debt-type .selected-receivable {
+  background: #bce5d8;
+}
+.debt-folder-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.debt-folder-row .MuiInputBase-root {
+  flex: 1;
+  min-width: 0;
+  height: 38px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+.debt-folder-row .MuiSelect-select {
+  padding: 8px 12px;
+}
+.debt-folder-row fieldset {
+  border-color: #bdc9d7;
+}
+.debt-folder-add {
+  color: #4680ff;
+  width: 32px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+}
+.debt-folder-add svg {
+  width: 20px;
+}
+.debt-form textarea {
+  min-height: 52px;
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 13px;
+  resize: vertical;
+}
+.debt-form .photo-field > p {
+  margin-bottom: 8px;
+}
+.debt-form .photo-input {
+  min-height: 56px;
+  padding: 12px;
+  flex-direction: row;
+  color: var(--text-secondary);
+}
+.debt-form .photo-input svg {
+  width: 22px;
+  height: 22px;
+}
+.debt-form .photo-input span {
+  font-size: 13px;
+}
+.debt-form .dialog-actions .button {
+  height: 36px;
+  min-height: 36px;
+  padding: 8px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+.quick-debt-add {
+  position: fixed;
+  right: 34px;
+  bottom: 30px;
+  z-index: 25;
+}
+.quick-debt-add .add-button {
+  position: static;
+  display: grid;
+  place-items: center;
+}
+.quick-debt-options {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
+}
+.quick-debt-add:hover .quick-debt-options,
+.quick-debt-add:has(:focus-visible) .quick-debt-options {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.quick-debt-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  white-space: nowrap;
+}
+.quick-debt-option span {
+  padding: 6px 16px;
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 1px 3px #0003;
+  font-size: 13px;
+}
+.quick-debt-option i {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 2px 5px #0002;
+}
+.quick-debt-option svg {
+  width: 21px;
+  height: 21px;
+}
+.quick-debt-option.payable i {
+  color: #f02032;
+}
+.quick-debt-option.receivable i {
+  color: #27aa82;
+}
+.quick-debt-option:hover span {
+  background: #edf3ff;
+}
+@media (max-width: 899px) {
+  .quick-debt-add {
+    right: 22px;
+    bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+}
+@media (max-width: 600px) {
+  .MuiDialog-paper.form-dialog.debt-form {
+    padding: 20px;
+    max-width: calc(100vw - 24px);
+    margin: 12px;
+    max-height: calc(100dvh - 24px);
+    gap: 26px;
+  }
+  .debt-amount-type {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .debt-form .dialog-actions {
+    gap: 4px;
+  }
+}
+
+.MuiDialog-paper.form-dialog.folder-form {
+  width: 480px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 24px;
+  gap: 28px;
+}
+
+.MuiDialog-paper.form-dialog.payment-form {
+  width: 480px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+}

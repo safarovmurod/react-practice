@@ -1,0 +1,154 @@
+@media (max-width: 899px) {
+  .payment {
+    padding: 10px 0;
+    gap: 8px;
+  }
+  .payment-name span {
+    font-size: 11px;
+  }
+  .payment-name span::first-line {
+    line-height: 1.4;
+  }
+  .payment-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .payment-badge {
+    display: none;
+  }
+  .payment-amount strong {
+    font-size: 12px;
+  }
+  .bottom-menu {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    box-shadow: 0 2px 6px #0003;
+    border-radius: 32px;
+    z-index: 20;
+  }
+  .bottom-menu a {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    color: #7b8998;
+  }
+  .bottom-menu a.active {
+    color: #4680ff;
+  }
+  .bottom-menu svg {
+    width: 23px;
+    height: 23px;
+  }
+  .add-button {
+    right: 22px;
+    bottom: calc(96px + env(safe-area-inset-bottom));
+    width: 48px;
+    height: 48px;
+  }
+  .footer {
+    padding: 26px 38px 110px;
+    font-size: 12px;
+    line-height: 1.7;
+    gap: 12px;
+  }
+  .footer > span {
+    flex: 1;
+  }
+  .footer div {
+    gap: 10px;
+    align-items: center;
+  }
+  .folders {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .profile-summary {
+    padding: 40px 20px;
+  }
+  .profile-settings h2 {
+    padding: 22px 20px;
+  }
+  .settings-body {
+    padding: 24px;
+  }
+  .language-buttons {
+    margin: 0;
+  }
+  .language-buttons button {
+    font-size: 10px;
+  }
+  .debt-details-grid {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  .debt-details > .page-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .history-content {
+    padding: 14px;
+  }
+  .history-payment {
+    gap: 8px;
+    padding: 10px;
+  }
+  .history-badge {
+    font-size: 8px;
+  }
+  .debt-title {
+    padding: 12px 12px 0;
+    margin: 0 0 -12px;
+  }
+  .debt-title .page-buttons button {
+    min-width: 64px;
+    height: 30px;
+  }
+  .debts-page > .balances {
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 359px) {
+  .content {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .header {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .mobile-page-title {
+    left: 18px;
+    font-size: 12px !important;
+  }
+  .header-right {
+    gap: 4px;
+  }
+  .balance-card {
+    padding: 12px;
+  }
+  .balance-label {
+    font-size: 8px;
+  }
+  .balance-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .balance-amount strong {
+    font-size: 16px;
+  }
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 10px;
+  }
+}

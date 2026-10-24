@@ -1,0 +1,164 @@
+.form-dialog {
+  max-width: 768px;
+  width: calc(100% - 32px);
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.form-dialog .dialog-heading h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-dialog .form-fields {
+  gap: 24px;
+}
+
+.form-dialog input,
+.profile-edit-form input {
+  height: 48px;
+  border: 1px solid #bdc9d7;
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: none;
+  padding: 12px 14px;
+}
+
+.form-dialog .form-label {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form-dialog textarea {
+  min-height: 94px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid #bdc9d7;
+}
+
+.outlined-field {
+  position: relative;
+  gap: 0;
+}
+
+.outlined-field .form-label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  pointer-events: none;
+  background: var(--surface);
+  padding: 0 3px;
+  color: var(--text-secondary);
+  z-index: 1;
+  transition:
+    top 0.15s,
+    font-size 0.15s;
+}
+
+.outlined-field:has(input:focus) .form-label,
+.outlined-field:has(input:not(:placeholder-shown)) .form-label,
+.outlined-field:has(input[type="date"]) .form-label {
+  top: -9px;
+  font-size: 11px;
+}
+
+.outlined-field input:focus-visible {
+  border-color: #4680ff;
+  box-shadow: none;
+  outline: none;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.dialog-actions button {
+  border-radius: 8px;
+}
+
+.dialog-actions .button-ghost {
+  color: #4680ff;
+}
+
+.debt-form {
+  max-width: 680px;
+}
+
+.form-select {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #bdc9d7;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.debt-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.debt-type button {
+  height: 44px;
+}
+
+.selected-payable.button {
+  background: #fce7eb;
+  border-color: #f02032;
+  color: #f02032;
+}
+
+.selected-receivable.button {
+  background: #e8f6f0;
+  border-color: #27aa82;
+  color: #27aa82;
+}
+
+.photo-field > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.photo-input {
+  min-height: 90px;
+  padding: 20px;
+  border: 1px dashed #bdc9d7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: #4680ff;
+  cursor: pointer;
+}
+
+.photo-input input {
+  display: none;
+}
+
+.photo-input img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}

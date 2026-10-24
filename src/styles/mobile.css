@@ -1,0 +1,137 @@
+@media (max-width: 899px) {
+  .sidebar {
+    display: none;
+  }
+  .body,
+  .menu-collapsed .body {
+    margin-left: 0;
+  }
+  .header {
+    height: 72px;
+    padding: 0 22px;
+    justify-content: flex-end;
+  }
+  .drawer-toggle {
+    display: none;
+  }
+  .header-right {
+    gap: 10px;
+  }
+  .header-right > button {
+    width: 30px;
+    height: 34px;
+  }
+  .header-right svg {
+    width: 20px;
+    height: 20px;
+  }
+  .fullscreen {
+    display: none;
+  }
+  .avatar-trigger,
+  .avatar-trigger img {
+    width: 38px;
+    height: 38px;
+  }
+  .mobile-page-title {
+    display: block;
+    position: fixed;
+    left: 28px;
+    top: 27px;
+    z-index: 11;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    max-width: calc(100% - 220px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content {
+    padding: 8px 22px 40px;
+  }
+  .page {
+    gap: 24px;
+  }
+  .page-title h1 {
+    font-size: 18px;
+  }
+  .page-title > button {
+    min-width: 36px;
+  }
+  .button-label {
+    display: none;
+  }
+  .welcome {
+    display: none;
+  }
+  .balances {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .balance-card {
+    min-height: 88px;
+    padding: 16px;
+    border-radius: 24px;
+    gap: 8px;
+  }
+  .balance-card.total {
+    grid-column: 1 / -1;
+  }
+  .balance-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 13px;
+  }
+  .balance-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .balance-label {
+    font-size: 8px;
+    font-weight: 500;
+  }
+  .balance-amount {
+    margin-top: 8px;
+    gap: 3px;
+  }
+  .balance-amount strong {
+    font-size: 18px;
+  }
+  .balance-amount span {
+    font-size: 11px;
+  }
+  .dashboard-content {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .box-header {
+    padding: 16px;
+  }
+  .box-header h2 {
+    font-size: 12px;
+  }
+  .year-button {
+    height: 32px;
+    width: 75px;
+  }
+  .chart-legend {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .chart-content {
+    padding: 0 16px 16px;
+  }
+  .chart {
+    height: 150px;
+  }
+  .payments-heading {
+    padding: 14px;
+  }
+  .payments-content {
+    padding: 4px 12px;
+  }
+}

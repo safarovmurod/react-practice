@@ -1,0 +1,92 @@
+.profile-dropdown {
+  width: 300px;
+  padding: 16px;
+}
+
+.profile-menu-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.profile-menu-heading img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.profile-menu-heading p {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.profile-menu-tabs {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.profile-menu-tabs button {
+  flex: 1;
+}
+
+.profile-theme-title {
+  font-size: 12px;
+  margin: 12px 0;
+}
+
+.theme-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.theme-buttons button {
+  padding: 8px;
+  border: 1px solid var(--surface-border);
+  border-radius: 6px;
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 48px 24px;
+  color: #123559;
+  font-size: 12px;
+}
+
+.footer div {
+  display: flex;
+  gap: 12px;
+}
+
+.footer a:hover {
+  color: #4680ff;
+}
+
+.bottom-menu {
+  display: none;
+}
+
+.add-button {
+  position: fixed;
+  right: 34px;
+  bottom: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  z-index: 20;
+  box-shadow: 0 7px 15px #4680ff33;
+}
+
+.add-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.quick-menu {
+  min-width: 210px;
+}

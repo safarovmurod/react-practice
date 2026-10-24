@@ -1,0 +1,237 @@
+.debt-details-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin: 24px;
+}
+
+.details-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.detail-heading h1 {
+  font-size: 20px;
+}
+
+.detail-heading p {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.close-debt-button {
+  background: #27aa82;
+}
+
+.debt-overview {
+  padding: 24px;
+  border-top: 4px solid #27aa82;
+}
+
+.debt-overview-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.debt-overview-name > div {
+  flex: 1;
+}
+
+.debt-overview-name strong {
+  font-size: 16px;
+}
+
+.debt-overview-name p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+.active-badge {
+  color: #00866b;
+  background: #dff2ec;
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+.detail-amount {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 28px 0 24px;
+}
+
+.detail-amount small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.detail-progress {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 9px;
+}
+
+.detail-progress strong {
+  color: #27aa82;
+}
+
+.detail-totals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.detail-totals div {
+  background: #f1f9f6;
+  border: 1px solid #d7eee5;
+  border-radius: 16px;
+  padding: 18px 16px;
+}
+
+.detail-totals div:last-child {
+  background: #fff9f0;
+  border-color: #ffe6bf;
+}
+
+.detail-totals span {
+  display: block;
+  font-size: 10px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.detail-information {
+  overflow: hidden;
+}
+
+.detail-information h2 {
+  padding: 22px 20px;
+  border-bottom: 1px solid var(--surface-border);
+  font-size: 14px;
+}
+
+.detail-information p {
+  margin: 0 24px;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 1px solid var(--surface-border);
+  font-size: 12px;
+}
+
+.detail-information p:last-child {
+  border-bottom: 0;
+}
+
+.detail-information svg {
+  width: 15px;
+  height: 15px;
+  color: var(--text-secondary);
+}
+
+.detail-information span {
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.payment-history .box-header {
+  border-bottom: 1px solid var(--surface-border);
+  padding: 20px;
+}
+
+.decrease-payment.button,
+.increase-payment.button {
+  border-radius: 50%;
+}
+
+.decrease-payment {
+  background: #f8bfc2;
+  color: #f02032;
+}
+
+.increase-payment {
+  background: #bee8d9;
+  color: #27aa82;
+}
+
+.history-content {
+  padding: 24px;
+}
+
+.history-payment {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--surface-border);
+  border-left: 3px solid #2dc6d5;
+  background: #f6fcfd;
+  border-radius: 18px;
+}
+
+.history-icon {
+  color: #2dc6d5;
+  background: #e0f6f8;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+}
+
+.history-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.history-payment > strong {
+  color: #2dc6d5;
+  font-size: 14px;
+}
+
+.history-payment small {
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.history-payment > div {
+  margin-left: auto;
+  text-align: right;
+}
+
+.history-badge {
+  color: #2dc6d5;
+  background: #e0f6f8;
+  padding: 3px 7px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.history-payment p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  color: var(--text-secondary);
+  font-size: 11px;
+}

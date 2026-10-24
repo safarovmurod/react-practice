@@ -1,0 +1,73 @@
+.folder-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.folder-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.folder-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.folder-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: #e9efff;
+  color: #4680ff;
+}
+
+.folder-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.folder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.folder-content p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.folder-content span {
+  color: var(--text-secondary);
+}
+
+.folder-content strong {
+  white-space: nowrap;
+}
+
+.folder-content small {
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.folder-arrow {
+  align-self: flex-end;
+  color: var(--text-secondary);
+}
+
+.folder-arrow svg {
+  width: 18px;
+  height: 18px;
+}

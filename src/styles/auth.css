@@ -1,0 +1,186 @@
+.auth-page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+  background: #ededfa;
+  color: #515463;
+}
+
+.auth-card.MuiPaper-root {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 760px;
+  min-height: 560px;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0 24px 65px rgba(37, 49, 73, 0.13);
+}
+
+.auth-background {
+  position: absolute;
+  inset: 0;
+  background: #046276;
+  clip-path: polygon(32% 0%, 100% 0%, 100% 100%, 100% 100%);
+  transition: clip-path 650ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.auth-page.is-register .auth-background {
+  clip-path: polygon(0% 0%, 68% 0%, 0% 100%, 0% 100%);
+}
+
+.auth-brand {
+  position: absolute;
+  top: 76px;
+  left: 50%;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+  transition: left 650ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.auth-page.is-register .auth-brand {
+  left: 0;
+}
+
+.auth-brand .auth-brand-name {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.auth-brand .auth-brand-text {
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.auth-form-panel {
+  position: relative;
+  left: 0;
+  width: 50%;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  padding: 32px 28px;
+  transition: left 650ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.auth-page.is-register .auth-form-panel {
+  left: 50%;
+}
+
+.auth-form-content,
+.auth-form {
+  width: 100%;
+}
+
+.auth-form-content {
+  animation: auth-form-in 450ms ease both;
+}
+
+.auth-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-register-form .auth-form-fields {
+  gap: 12px;
+}
+
+.auth-form-title.MuiTypography-root {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.auth-field .MuiFilledInput-root {
+  min-height: 56px;
+  border-radius: 8px;
+  background: #f1f2f5;
+}
+
+.auth-field .MuiFilledInput-root:hover,
+.auth-field .MuiFilledInput-root.Mui-focused {
+  background: #e9edf0;
+}
+
+.auth-field .MuiFilledInput-input {
+  box-sizing: content-box;
+  height: 1.4em;
+  padding: 25px 12px 8px;
+}
+
+.auth-field .MuiInputLabel-root.Mui-focused {
+  color: #046276;
+}
+
+.auth-submit.MuiButton-root {
+  padding-top: 10.4px;
+  padding-bottom: 10.4px;
+  border-radius: 8px;
+  background: #046276;
+  text-transform: none;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.auth-submit.MuiButton-root:hover {
+  background: #034c5b;
+  box-shadow: none;
+}
+
+.auth-switch {
+  text-align: center;
+}
+
+.auth-switch-button.MuiButton-root {
+  color: #046276;
+  text-transform: none;
+}
+
+@keyframes auth-form-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 599px) {
+  .auth-card.MuiPaper-root,
+  .auth-form-panel {
+    min-height: 640px;
+  }
+
+  .auth-background,
+  .auth-page.is-register .auth-background {
+    clip-path: polygon(0 0, 100% 0, 100% 23%, 0 23%);
+  }
+
+  .auth-brand,
+  .auth-page.is-register .auth-brand {
+    top: 44px;
+    left: 0;
+    width: 100%;
+  }
+
+  .auth-form-panel,
+  .auth-page.is-register .auth-form-panel {
+    left: 0;
+    width: 100%;
+    padding: 184px 24px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-page *,
+  .auth-page *::before,
+  .auth-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

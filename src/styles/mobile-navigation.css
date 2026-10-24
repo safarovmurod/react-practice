@@ -1,0 +1,31 @@
+@media (max-width: 899px) {
+  .desktop-chart {
+    display: none;
+  }
+  .mobile-chart {
+    display: block;
+  }
+  .chart-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+  .chart-navigation button {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+  }
+  .chart-navigation button:disabled {
+    opacity: 0.35;
+  }
+  .chart-navigation svg {
+    width: 16px;
+    height: 16px;
+  }
+}

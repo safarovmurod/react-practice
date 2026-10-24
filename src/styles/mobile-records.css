@@ -1,0 +1,216 @@
+@media (max-width: 899px) {
+  .desktop-table {
+    display: none;
+  }
+  .mobile-records {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 12px 12px;
+  }
+  .contact-table {
+    border-radius: 12px;
+  }
+  .contact-table .table-toolbar {
+    padding: 16px;
+  }
+  .contact-table .search-field {
+    height: 52px;
+  }
+  .table-toolbar {
+    padding: 12px;
+    gap: 16px;
+  }
+  .search-field {
+    height: 36px;
+    border-radius: 16px;
+    font-size: 14px;
+  }
+  .filters {
+    gap: 6px;
+  }
+  .filter-select {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .filters button {
+    width: 40px;
+    height: 40px;
+  }
+  .filters button svg {
+    width: 17px;
+    height: 17px;
+  }
+  .contact-mobile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 12px;
+    border: 1px solid var(--surface-border);
+    border-radius: 13px;
+    min-height: 92px;
+    background: var(--surface);
+  }
+  .contact-mobile-card strong {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .contact-mobile-card p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+  }
+  .contact-mobile-card button {
+    color: var(--text-secondary);
+  }
+  .debt-mobile-card {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid var(--surface-border);
+    border-radius: 17px;
+    gap: 10px;
+    min-height: 76px;
+    background: var(--surface);
+  }
+  .debt-mobile-card .person-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 17px;
+  }
+  .debt-card-person {
+    flex: 1;
+    min-width: 0;
+    font-size: 12px;
+  }
+  .debt-card-person strong {
+    font-weight: 500;
+  }
+  .debt-card-person p {
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+  }
+  .debt-card-person svg {
+    width: 12px;
+    height: 12px;
+  }
+  .debt-mobile-card > p {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .debt-mobile-card > button {
+    width: 20px;
+    height: 30px;
+    color: var(--text-secondary);
+  }
+  .debt-mobile-card > button svg {
+    width: 14px;
+    height: 14px;
+  }
+  .archive-table {
+    border-radius: 12px;
+  }
+  .archive-table .filters button:first-of-type {
+    display: none;
+  }
+  .archive-table .table-toolbar {
+    gap: 8px;
+  }
+  .archive-table .filter-select {
+    height: 32px;
+    border-radius: 8px;
+  }
+  .archive-table .filters button {
+    height: 32px;
+    width: 32px;
+    border-radius: 8px !important;
+  }
+  .archive-mobile-card {
+    padding: 12px;
+    border: 1px solid var(--surface-border);
+    border-left: 3px solid #52bd98;
+    border-radius: 15px;
+    background: var(--surface);
+  }
+  .outgoing-card {
+    border-left-color: #f02032;
+  }
+  .archive-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .archive-card-heading > a {
+    flex: 1;
+  }
+  .archive-card-heading svg {
+    width: 15px;
+    height: 15px;
+    color: var(--text-secondary);
+  }
+  .archive-card-heading small {
+    font-size: 10px;
+  }
+  .closed-badge {
+    font-size: 9px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background: #f0f1f3;
+    color: #667788;
+  }
+  .archive-card-progress {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+  }
+  .archive-card-progress .progress-bar {
+    flex: 1;
+    height: 3px;
+  }
+  .archive-card-progress small {
+    font-size: 8px;
+    color: #8899a6;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .content {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .balance-card {
+    padding: 16px;
+  }
+  .balance-label {
+    font-size: 11px;
+  }
+  .balance-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .balance-amount strong {
+    font-size: 20px;
+  }
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  .folders {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .debt-details-grid {
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+}

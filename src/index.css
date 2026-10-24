@@ -1,1 +1,49 @@
-@import "tailwindcss";
+@import "./styles/controls.css";
+@import "./styles/theme.css";
+@import "./styles/errors.css";
+@import "./styles/auth.css";
+@import "./styles/layout.css";
+@import "./styles/layout-header.css";
+@import "./styles/dashboard.css";
+@import "./styles/dashboard-payments.css";
+@import "./styles/tables.css";
+@import "./styles/folders.css";
+@import "./styles/forms.css";
+@import "./styles/debt-form.css";
+@import "./styles/profile.css";
+@import "./styles/details.css";
+@import "./styles/payment-history.css";
+@import "./styles/mobile.css";
+@import "./styles/mobile-dashboard.css";
+@import "./styles/mobile-navigation.css";
+@import "./styles/mobile-records.css";
+@import "./styles/home.css";
+@import "./styles/home-font.css";
+@import "./styles/home-sections.css";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #1d2935;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+h1,
+p {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  color: inherit;
+}

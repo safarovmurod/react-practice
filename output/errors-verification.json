@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "results": [
+    "unknown URLs stay 404, refresh, back-home, login/register, auth guard",
+    "nested render crash caught, no raw message/stack in UI, reload recovers",
+    "auth page render crash caught, home link recovers",
+    "RouteErrorResponse status 404 maps to NotFoundPage",
+    "failed lazy import caught and reload recovers",
+    "Tajik/Russian translations, 390px mobile, dark theme"
+  ]
+}

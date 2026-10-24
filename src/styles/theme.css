@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Reference Inter";
+  src: url("/reference/inter.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --surface: #fff;
+  --page-background: #f7f8fa;
+  --text-primary: #1d2935;
+  --text-secondary: #667788;
+  --surface-border: #e4e9f0;
+}
+
+.dark {
+  --surface: #202938;
+  --page-background: #141b26;
+  --text-primary: #e4eaf2;
+  --text-secondary: #abb8c8;
+  --surface-border: #354255;
+  --background: #141b26;
+  --foreground: #e4eaf2;
+}
+
+.layout,
+.landing,
+.form-dialog,
+.MuiMenu-paper {
+  font-family: "Reference Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text-primary);
+}
+
+.green {
+  color: #27aa82;
+}
+
+.red {
+  color: #f02032;
+}
+
+.orange {
+  color: #ed9200;
+}
+
+.muted {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.layout h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.layout h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.layout button {
+  font-family: inherit;
+}
+
+.layout .button svg {
+  flex-shrink: 0;
+}
+
+.layout .page-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page-title h1 {
+  margin: 0;
+}
+
+.mobile-page-title {
+  display: none;
+}
+
+.page-loading {
+  min-height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #4680ff;
+  font-family: "Reference Inter", Arial, sans-serif;
+}
+
+.loading-icon {
+  width: 24px;
+  height: 24px;
+  animation: page-spin 0.8s linear infinite;
+}
+
+@keyframes page-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

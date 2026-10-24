@@ -1,0 +1,201 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #4680ff;
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #356de4;
+}
+.button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.button-outline {
+  background: var(--surface);
+  color: var(--text-primary);
+  border-color: var(--surface-border);
+}
+.button-ghost {
+  background: transparent;
+  color: inherit;
+}
+.button-outline:hover,
+.button-ghost:hover {
+  background: #edf2fb;
+}
+.button-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.button:focus-visible {
+  outline: 2px solid #4680ff;
+  outline-offset: 2px;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+input,
+textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1px solid #bdc9d7;
+  border-radius: 8px;
+}
+input:focus,
+textarea:focus {
+  outline: 2px solid #4680ff;
+  outline-offset: -1px;
+}
+input::placeholder {
+  color: #7a879c;
+}
+.form-field,
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.MuiDialog-paper.form-dialog {
+  margin: 16px;
+}
+.dialog-heading h2 {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  text-align: left;
+  font-weight: 500;
+}
+td,
+th {
+  padding: 8px;
+  vertical-align: middle;
+}
+thead tr,
+tbody tr {
+  border-bottom: 1px solid var(--surface-border);
+}
+tbody tr:last-child {
+  border-bottom: 0;
+}
+tbody tr:hover {
+  background: #f1f4f855;
+}
+progress {
+  display: block;
+  width: 100%;
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+progress::-webkit-progress-bar {
+  background: #def0e8;
+}
+progress::-webkit-progress-value {
+  background: #27aa82;
+  border-radius: 8px;
+}
+progress::-moz-progress-bar {
+  background: #27aa82;
+}
+.red-progress::-webkit-progress-value {
+  background: #f02032;
+}
+.red-progress::-moz-progress-bar {
+  background: #f02032;
+}
+
+.MuiMenu-paper {
+  border: 1px solid var(--surface-border);
+  border-radius: 8px !important;
+  background: var(--surface) !important;
+  color: var(--text-primary) !important;
+  min-width: 150px;
+}
+.MuiMenu-paper .MuiMenu-list {
+  padding: 4px;
+}
+.MuiMenu-paper .MuiMenuItem-root {
+  min-height: 36px;
+  padding: 6px 8px;
+  gap: 8px;
+  font-family: "Reference Inter", Arial, sans-serif;
+  font-size: 14px;
+}
+.MuiMenuItem-root svg {
+  width: 16px;
+  height: 16px;
+}
+.menu-heading {
+  padding: 8px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.MuiMenu-paper.profile-dropdown {
+  padding: 16px;
+}
+.profile-menu-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #f1f4f8;
+}
+.profile-menu-tabs button {
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+}
+.profile-menu-tabs button[aria-selected="true"] {
+  background: var(--surface);
+  color: #4680ff;
+  box-shadow: 0 1px 3px #0001;
+}
+.MuiMenu-paper .notification-message {
+  white-space: normal;
+}
+.home-header .button {
+  min-width: 36px;
+  width: auto;
+}
